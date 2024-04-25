@@ -9,29 +9,32 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 
 
-const Navbar = () => {
+const Navbar = (props) => {
 
   const {getTotalCartItems} = useContext(ShopContext)
-  const [darkmode, setDarkMode] = useState("black");
+  const [mode, setMode] = useState("black");
 
-  const toggleMode=(darkMode)=>{
-    if(darkMode === "black"){
-      document.body.style.backgroundColor = "#35374B";
+  const toggleMode=(mode)=>{
+    if(mode === "black"){
+      document.body.style.backgroundColor = "#042743";
+      return props.getMode("black");
       
     }
     else{
       document.body.style.backgroundColor = "white";
+      return props.getMode("white");
     }
   }
 
 
+
   return (
     <>
-    <div className="navbar" style={{ backgroundColor : darkmode==="black"?"white":"#35374B"}}>
+    <div className="navbar" style={{ backgroundColor : mode==="black"?"white":"#042743"}}>
       <Link to="/">
           <div className="nav-logo">
               <img src= {logo} alt="navbar logo" /> 
-              <p>Shopper</p>
+              <p>Ecomm</p>
           </div>
       </Link>
 
@@ -46,14 +49,15 @@ const Navbar = () => {
           <Link to="/signup">  <button>LOG IN</button>  </Link>          {/*  //changes done yesterday */}
           <Link to="/cart">  <img src={cart} alt="cart icon" />  </Link>
           <div className="nav-cart-count"> {getTotalCartItems()} </div>
+
           <DarkModeIcon onClick={()=>{
-            if(darkmode === "black"){
-              setDarkMode("white");
+            if(mode === "black"){
+              setMode("white");
 
             }
-            darkmode==="black"?setDarkMode("white"):setDarkMode("black");
-            console.log(darkmode);
-            toggleMode(darkmode);
+            mode==="black"?setMode("white"):setMode("black");
+            // console.log(mode);
+            toggleMode(mode);
           }}></DarkModeIcon>
 
          

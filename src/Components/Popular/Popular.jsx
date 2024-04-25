@@ -3,7 +3,7 @@ import "./Popular.css"
 import data_product from "../Images/data"
 import Item from '../Items/Item'
 
-const Popular = () => {
+const Popular = (props) => {
   return (
     <div>
 
@@ -15,6 +15,7 @@ const Popular = () => {
 
       <div className="popular-dash">
         <hr />
+        {console.log(props.mode)}
       </div>
 
         <div className="popular-items">

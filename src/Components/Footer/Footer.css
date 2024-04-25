@@ -1,5 +1,6 @@
 .footer{
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center ;
     width: 100%;
@@ -34,5 +35,12 @@
     padding: 4vh 0;
     width: 100;
     background-color: #72a5f580;
-
 }
+
+/* @media screen and (max-width: 1400px) {
+    .footer{
+        flex-direction: column;
+        justify-content: start;
+        height: auto;
+    }
+} */

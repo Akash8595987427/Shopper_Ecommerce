@@ -1,12 +1,13 @@
 import React from 'react'
 import "./Login.css"                                 // This page created yester 
 
-const Login = () => {
+const Login = (props) => {
   return (
     <div>
          <div>
       
-      <div className="loginsignup">
+      <div className="loginsignup" style={{backgroundColor : (props.mode === "black")?"#829bff":"grey"}}>
+        {/* {console.log(props.modes)} */}
         <div className="loginsignup-container">
           <h1>Login Up</h1>
 
