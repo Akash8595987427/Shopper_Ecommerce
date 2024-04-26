@@ -32,7 +32,7 @@ const App = () => {
    <Router>
     <Navbar getMode = {getModeFunction}/>                                {/* By this Navbar is available in all the component  */}
     <Routes>
-      <Route path="/" element={<Shop/>} />
+      <Route path="/" element={<Shop mode={modes}/>} />
       <Route path="/mens" element={<ShopCategory banner={men_banner} category="men" mode={modes}/>} />
       <Route path="/womens" element={<ShopCategory banner={women_banner} category="women" />} />
       <Route path="/kids" element={<ShopCategory banner={kid_banner} category="kid" />} />

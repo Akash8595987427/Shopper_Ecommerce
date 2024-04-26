@@ -69,9 +69,7 @@
     cursor: pointer;
 }
 
-.nav-login-cart img{
-    height: 4vh;                          /* changes done yesterday  */
-}
+
 
 .nav-login-cart button:active{
     background-color: #f3f3f3;
@@ -83,8 +81,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -18px;                        /* changes done yesterday  */
-    margin-left: -50px;                        /* changes done yesterday  */
+    margin-top: -24px;                        /* changes done yesterday  */
+    margin-left: -52px;                        /* changes done yesterday  */
     border-radius: 7px;                           /* changes done yesterday  */
     font-size: 12px;                              /* changes done yesterday  */
     background-color: red;

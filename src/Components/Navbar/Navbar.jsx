@@ -1,10 +1,11 @@
 import React, {useContext, useState} from 'react'
 import "./Navbar.css"
 import logo from "../Images/logo.png"
-import cart from "../Images/cart_icon.png"
+// import cart from "../Images/cart_icon.png"
 import { Link } from 'react-router-dom'                  //changes done yesterday 
 import { ShopContext } from '../../Context/ShopContext'
 import DarkModeIcon from '@mui/icons-material/DarkMode'; 
+import { IoCartSharp } from "react-icons/io5";
 
 
 
@@ -16,7 +17,7 @@ const Navbar = (props) => {
 
   const toggleMode=(mode)=>{
     if(mode === "black"){
-      document.body.style.backgroundColor = "#042743";
+      document.body.style.backgroundColor = "black";
       return props.getMode("black");
       
     }
@@ -30,35 +31,36 @@ const Navbar = (props) => {
 
   return (
     <>
-    <div className="navbar" style={{ backgroundColor : mode==="black"?"white":"#042743"}}>
+    <div className="navbar" style={{ backgroundColor : mode==="black"?"white":"black"}}>
       <Link to="/">
           <div className="nav-logo">
               <img src= {logo} alt="navbar logo" /> 
-              <p>Ecomm</p>
+              <p style={{color : (mode==="white")?"yellow":"black"}}>Ecomm</p>
           </div>
       </Link>
 
         <div className="nav-menu ">
-          <li> <Link  style={{ textDecoration: "none"}}   to="/" > Shop  </Link> </li>
-          <li> <Link  style={{ textDecoration: "none"}}   to="/mens" > Men  </Link> </li>
-          <li> <Link  style={{ textDecoration: "none"}}  to="/womens" >  Women  </Link>  </li>
-          <li> <Link  style={{ textDecoration: "none"}}  to="/kids" > Kids </Link>  </li> 
+          <li> <Link  style={{ color : (mode==="white")?"yellow":"black", textDecoration: "none"}}   to="/" > Shop  </Link> </li>
+          <li> <Link  style={{ color : (mode==="white")?"yellow":"black", textDecoration: "none"}}   to="/mens" > Men  </Link> </li>
+          <li> <Link  style={{ color : (mode==="white")?"yellow":"black", textDecoration: "none"}}  to="/womens" >  Women  </Link>  </li>
+          <li> <Link  style={{ color : (mode==="white")?"yellow":"black", textDecoration: "none"}}  to="/kids" > Kids </Link>  </li> 
         </div>
 
         <div className="nav-login-cart ">
-          <Link to="/signup">  <button>LOG IN</button>  </Link>          {/*  //changes done yesterday */}
-          <Link to="/cart">  <img src={cart} alt="cart icon" />  </Link>
-          <div className="nav-cart-count"> {getTotalCartItems()} </div>
+          <Link to="/signup">  <button style={{backgroundColor : (mode==="white")?"yellow":"white"}}>LOG IN</button>  </Link>          {/*  //changes done yesterday */}
+          <Link to="/cart"> <IoCartSharp style={{color : (mode==="white")?"yellow":"black", fontSize : "1.5rem"}} />  </Link>
+          <div className="nav-cart-count" > {getTotalCartItems()} </div>
 
           <DarkModeIcon onClick={()=>{
             if(mode === "black"){
               setMode("white");
-
+              toggleMode(mode);
             }
-            mode==="black"?setMode("white"):setMode("black");
-            // console.log(mode);
-            toggleMode(mode);
-          }}></DarkModeIcon>
+            else if(mode === "white"){
+              setMode("black");
+              toggleMode(mode)
+            }
+          }} style={{color : (mode==="white")?"yellow":"black"}}></DarkModeIcon>
 
          
 

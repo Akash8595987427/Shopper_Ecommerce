@@ -8,14 +8,17 @@ import Newsletter from "../Components/Newsletter/Newsletter";
 
 
 
-const Shop = () => {
+const Shop = (props) => {
+  const modes = props.mode
+  // console.log(props.mode);
   return (
     <>
+    
       <Hero />
       <Item />
-      <Popular />
+      <Popular mode = {modes}  />
       <Offers />
-      <NewCollections />
+      <NewCollections mode = {modes} />
       <Newsletter />
     </>
   );
