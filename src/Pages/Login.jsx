@@ -6,8 +6,8 @@ const Login = (props) => {
     <div>
          <div>
       
-      <div className="loginsignup" style={{backgroundColor : (props.mode === "black")?"#829bff":"grey"}}>
-        {/* {console.log(props.modes)} */}
+      <div className="loginsignup" style={{backgroundColor : (props.mode === "black")?"#042743":"#829bff"}}>
+        {/* {console.log(props.mode)} */}
         <div className="loginsignup-container">
           <h1>Login Up</h1>
 

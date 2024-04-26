@@ -21,9 +21,9 @@ const App = () => {
   const [modes, setModes] = useState();
 
   const getModeFunction=(mode)=>{
-    console.log(mode);
+    // console.log(mode);
     setModes(mode);
-    console.log(modes);
+    // console.log(modes);
   }
 
   
@@ -34,16 +34,16 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Shop mode={modes}/>} />
       <Route path="/mens" element={<ShopCategory banner={men_banner} category="men" mode={modes}/>} />
-      <Route path="/womens" element={<ShopCategory banner={women_banner} category="women" />} />
-      <Route path="/kids" element={<ShopCategory banner={kid_banner} category="kid" />} />
+      <Route path="/womens" element={<ShopCategory banner={women_banner} category="women" mode={modes} />} />
+      <Route path="/kids" element={<ShopCategory banner={kid_banner} category="kid" mode={modes} />} />
       <Route path="/product" element={<Product mode={modes}/>}  />
       <Route path= '/product/:productId' element={<Product mode={modes}/>}  />
       <Route path="/cart" element={<Cart mode={modes}/>}  />
-      <Route path="/signup" element={<Signup mode={modes}/>}  />                           {/*   code changes yesterday     */}
-      <Route path="/login" element={<Login mode={modes}/>}  />                             {/*   code changes yesterday     */}
+      <Route path="/signup" element={<Signup mode={modes}/>}  />                         
+      <Route path="/login" element={<Login mode={modes}/>}  />                            
 
     </Routes>
-    <Footer />
+    <Footer mode={modes} />
    </Router>
 
    {/* {document.body.style.backgroundColor="#042743"} */}

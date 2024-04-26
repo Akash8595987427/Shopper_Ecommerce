@@ -3,6 +3,7 @@ import "./ShopCategory.css"
 import { ShopContext } from '../Context/ShopContext'
 import dropdown_icon from "../Components/Images/dropdown_icon.png"
 import Item from '../Components/Items/Item'
+import { RiArrowDropDownLine } from "react-icons/ri";
 // import all_product from '../Components/Images/all_product'
 
 
@@ -11,6 +12,9 @@ import Item from '../Components/Items/Item'
 const ShopCategory = (props) => {
 
   const {all_product} = useContext(ShopContext);
+  const changeTheme = {
+    color : (props.mode==="black")?"yellow":"black",
+  }
   return ( 
     <>
     {console.log(props.mode)}
@@ -20,9 +24,10 @@ const ShopCategory = (props) => {
         </div>
 
         <div className="shop-category-indexSort">
-            <p> <span>Showing 1-12</span> out of 36 product </p>
-          <div className="shopcategory-sort">
-              Sort by <img src={dropdown_icon} alt="" />
+            <p style={changeTheme}> <span>Showing 1-12</span> out of 36 product </p>
+          <div className="shopcategory-sort" style={changeTheme}>
+             <p>Sort by </p> 
+             <div><RiArrowDropDownLine style={{fontSize: "3rem"}}/></div>
           </div>
         </div>
 

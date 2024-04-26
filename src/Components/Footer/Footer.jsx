@@ -3,20 +3,24 @@ import "./Footer.css"
 import logo from "../Images/logo.png"
  
 
-const Footer = () => {
+const Footer = (props) => {
+
+    const changeTheme = {
+        color : (props.mode === "black")?"white":"",
+    }
   return (
     <>
 
-    <div className="footer">
-        
+    <div className="footer" style={changeTheme}>
+        {console.log(props.mode)}
         <div className="panel_1">
             <div className="panel_1_info">
                 <img src={logo} alt="ecommerce_logo" />
-                <h2>Shopper</h2>
+                <h2 >Shopper</h2>
             </div>
 
             <div className="panel_info">
-                Wear the premium tshirts, hoddies, sweatshirts, zipper and apparals
+               <p > Wear the premium tshirts, hoddies, sweatshirts, zipper and apparals </p>
             </div>
         </div>
 
@@ -43,7 +47,7 @@ const Footer = () => {
         </div>
     </div>
 
-    <div className="copyright">
+    <div className="copyright" style={changeTheme}>
         Copyright &copy;  2023  -  All Right Reserved 
     </div>
       
