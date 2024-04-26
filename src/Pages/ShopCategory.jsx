@@ -1,10 +1,9 @@
 import React, { useContext } from 'react'
 import "./ShopCategory.css"
 import { ShopContext } from '../Context/ShopContext'
-import dropdown_icon from "../Components/Images/dropdown_icon.png"
 import Item from '../Components/Items/Item'
 import { RiArrowDropDownLine } from "react-icons/ri";
-// import all_product from '../Components/Images/all_product'
+
 
 
 

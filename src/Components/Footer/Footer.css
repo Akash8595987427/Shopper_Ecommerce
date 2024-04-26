@@ -22,11 +22,16 @@
 
 .panel_1_info{
     display: flex;
+    justify-content: center;
 }
 
 
 .panel_1_info h2{
     margin-top: 10px;
+}
+
+.panel_info{
+    text-align: center;
 }
 
 .copyright{

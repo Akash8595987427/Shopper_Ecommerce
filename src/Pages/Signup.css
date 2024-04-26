@@ -4,38 +4,41 @@
     sans-serif;
 }
 
-.loginsignups{
+.signupPage{
     width: 100%;
-    height: 85vh;
+    height: 90vh;
     background-color: #fce3fe;
     display: flex;
     justify-content: center;
 }
 
 
-.loginsignup-container{
+.signupPage-container{
     width: 30%;
     height: 80%;
     background-color: white;
     margin: auto;
     padding: 10px 13px;
+    border-radius: 12px;
 }
 
 
-.loginsignup-container h1{
+.signupPage-container h1{
+    width: 100%;
+    text-align: center;
     font-size: large;
     font-weight: 500;
     margin: 2vh 0px;
 }
 
 
-.loginsignup-fields{
+.signupPage-fields{
     display: flex;
     flex-direction: column;
     gap: 17px;
 }
 
-.loginsignup-fields input{
+.signupPage-fields input{
     height: 41px;
     width: 100%;
     padding-left: 20px;
@@ -46,7 +49,7 @@
 }
 
 
-.loginsignup-container button{
+.signupPage-container button{
     height: 41px;
     width: 100%;
     /* padding-left: 20px; */
@@ -59,17 +62,17 @@
 }
 
 
-.loginsignup-login{
+.signupPage-login{
     font-size: small;
 }
 
-.loginsignup-login span{
+.signupPage-login span{
     color: red;
     font-weight: 600;
 }
 
 
-.loginsignup-agree{
+.signupPage-agree{
     display: flex;
     align-items: center;
     font-size: small;

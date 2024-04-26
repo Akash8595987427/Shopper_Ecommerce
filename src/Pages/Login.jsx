@@ -2,14 +2,21 @@ import React from 'react'
 import "./Login.css"                                 // This page created yester 
 
 const Login = (props) => {
+  const changeBackground={
+    backgroundColor : (props.mode === "black")?"black":"white",
+  }
+
+  const changeColor={
+    color : (props.mode === "black")?"white":"black",
+  }
   return (
     <div>
          <div>
       
       <div className="loginsignup" style={{backgroundColor : (props.mode === "black")?"#042743":"#829bff"}}>
         {/* {console.log(props.mode)} */}
-        <div className="loginsignup-container">
-          <h1>Login Up</h1>
+        <div className="loginsignup-container" style={changeBackground} >
+          <h1 style={changeColor}>Login Up</h1>
 
           <div className="loginsignup-fields">
           {/* <input type="text" placeholder='Your Name' /> */}
@@ -21,7 +28,7 @@ const Login = (props) => {
 
           <div className="loginsignup-agree">
           {/* <input type="checkbox" /> */}
-          <p>By continuing I agree to the terms of use & privacy policy</p>
+          <p style={changeColor}>By continuing I agree to the terms of use & privacy policy</p>
           </div>
 
         </div>
