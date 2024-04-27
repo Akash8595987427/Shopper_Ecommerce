@@ -58,3 +58,46 @@
     background-size: contain;
     width: 60%;
 }
+
+
+/* ! ================================================================================================================= */
+/*   !  Responsiveness */
+/*! ================================================================================================================== */
+
+@media screen and (max-width: 1186px) {
+    .offers-right{
+        display: none;
+    }
+    .offers-left{
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 732px) {
+    .offers-left h1{
+        font-size: 40px;
+    }
+    .offers-left button{
+        width: 170px;
+        height: 50px;
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .offers-left h1{
+        font-size: 25px;
+    }
+    .offers-left p{
+        font-size: 12px;
+    }
+    .offers-left button{
+        width: 95px;
+        height: 40px;
+        font-size: 11px;
+    }
+    .offers{
+        padding: 0 0;
+    }
+}

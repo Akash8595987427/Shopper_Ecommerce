@@ -15,7 +15,7 @@ const Shop = (props) => {
     <>
     
       <Hero />
-      <Item />
+      <Item mode={modes} />
       <Popular mode = {modes}  />
       <Offers />
       <NewCollections mode = {modes} />
