@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import "./ProductDisplay.css"
 import star_icon from "../Images/star_icon.png"
 import star_dull_icon from "../Images/star_dull_icon.png"
@@ -6,8 +6,9 @@ import { ShopContext } from '../../Context/ShopContext'
 import { Link } from 'react-router-dom'
 
 
-const ProductDisplay = (props) => {
 
+const ProductDisplay = (props) => {
+    const [size, setSize]  =  useState(false);
     const {product} = props;
     const {addToCart} = useContext(ShopContext);
 
@@ -48,18 +49,26 @@ const ProductDisplay = (props) => {
                 <div className="productdisplay-rigth-size">
                     <h1> Select Size </h1>
                     <div className="productdisplay-right-sizes" onClick={(event)=>{ 
+                        const div = document.querySelector('div');
                         if(event.target.classList.contains("size")){ 
-                            event.target.style.backgroundColor = "green"; 
-                        }}}>
-                        <div className='size'>S</div>
-                        <div className='size'>M</div>
-                        <div className='size'>L</div>
-                        <div className='size'>XL</div>
+                            event.target.classList.add('selected');
+                            setSize(event.target.innerHTML);
+                            // deselect all other buttons
+                            const divElem = div.querySelectorAll('.size');
+                            divElem.forEach((divElem) => {
+                            if (divElem !== event.target) {
+                                divElem.classList.remove('selected');
+                            }
+                        })}}}>
+                        <div className='size' >S</div>
+                        <div className='size' >M</div>
+                        <div className='size' >L</div>
+                        <div className='size' >XL</div>
                         <div className='size'>XXL</div>
                     </div>
                 </div>
                     <button className='cart_btn' onClick={()=>{addToCart(product.id);  window.scrollTo(0, 0)}}>ADD TO CART</button> 
-                <Link to="/cart"><button className='cart_btn' onClick={()=>{ window.scrollTo(0, 0)}}>GO TO CART</button> </Link>
+                <Link to="/cart"><button className='cart_btn' onClick={(size)=>{ window.scrollTo(0, 0)}}>GO TO CART</button> </Link>
                 <p className='productdisplay-right-category'><span> Category : </span> Woman, T-Shirt, Crop Top</p>
                 <p className='productdisplay-right-category'><span> Tags : </span> Modern, T-Latest</p>
             </div>

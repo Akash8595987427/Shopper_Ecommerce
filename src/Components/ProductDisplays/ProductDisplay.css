@@ -91,6 +91,8 @@
 }
 
 
+
+
 .productdisplay-right-sizes div{
     padding: 18px 24px;
     background-color: #fbfbfb;
@@ -99,6 +101,10 @@
     cursor: pointer;
 }
 
+.selected{
+    background-color: #4582ec !important ;
+    color: white !important ;
+}
 
 .productdisplay-right button{
     padding: 20px 40px;

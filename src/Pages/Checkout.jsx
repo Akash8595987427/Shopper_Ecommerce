@@ -57,7 +57,7 @@ const Checkout = () => {
             handler: function (response) {
 
                 console.log(response)
-                {console.log(cartItems())}
+                // {console.log(cartItems())}
             
 
                 const paymentId = response.razorpay_payment_id

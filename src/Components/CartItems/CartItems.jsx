@@ -5,7 +5,7 @@ import remove_icon from "../Images/cart_cross_icon.png"
 import { Link } from 'react-router-dom'
 
 
-const CartItems = () => {
+const CartItems = (props) => {
     const {all_product, cartItems, removeFromCart, getTotalCartAmount} = useContext(ShopContext); 
     // const {} = useContext(ShopContext);
 
@@ -21,7 +21,7 @@ const CartItems = () => {
             <p>Remove</p>
         </div>
         <hr />
-       
+       { console.log(props.size)}
        {all_product.map((e)=>{
         if(cartItems[e.id]>0)
         {
@@ -45,7 +45,7 @@ const CartItems = () => {
         <div className="cartitems-total">
 
         <h1> Cart Totals </h1>
-        <div>
+        <div className='cart_total_calculate'>
           <div className="cartitems-total-item">
             <p>Subtotal</p>
             <p>$ {getTotalCartAmount()}</p>
@@ -64,7 +64,7 @@ const CartItems = () => {
           </div>
 
           
-          <Link to="/checkout"> <button>PROCEED TO CHECKOUT</button> </Link>
+          <Link to="/checkout"> <button id='proceedBtn'> CHECKOUT</button> </Link>
 
         </div>
       </div>
