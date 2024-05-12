@@ -23,13 +23,13 @@
 
 
 .productdisplay-img-list img{
-    height: 3%;
+    height: 10%;
 }
 
 
 .productdisplay-main-img{
     /* height: 23%; */
-    width: 95%;
+    width: 100%;
     height: auto;
 }
 

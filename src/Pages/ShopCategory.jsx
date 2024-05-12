@@ -16,7 +16,7 @@ const ShopCategory = (props) => {
   }
   return ( 
     <>
-    {console.log(props.mode)}
+    {/* {console.log(props.mode)} */}
     <div className="shop-category">
         <div className='shop-category-img'>
         <img src={props.banner} alt="" />

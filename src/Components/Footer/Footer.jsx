@@ -16,7 +16,7 @@ const Footer = (props) => {
         <div className="panel">
             <div className="panel_upper">
                 <img src={logo} alt="ecommerce_logo" />
-                <h4 >Shopper</h4>
+                <h4 >Ecomm</h4>
             </div>
             <div className="panel_lower">
                <p > Wear the premium tshirts, hoddies, sweatshirts, zipper and apparals </p>

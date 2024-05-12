@@ -15,13 +15,14 @@
     height: 10vh;
     display: flex;
     justify-content: center;
+    text-align: center;
     /* background-color: yellow; */
 }
 
 
 .popular-heading h1{
     color: #171717;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 600;
 }
 
@@ -64,3 +65,23 @@
     gap: 20px;
     justify-content: center;
 }
+
+
+/** ========================================  Start for the Responsive Code  ========================================= */
+
+@media screen and (max-width: 520px) {
+    .popular-dash hr {
+        display: none
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .popular-heading {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/** =========================================  End for the Responsive Code  ========================================== */

@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import "./CartItems.css"
 import { ShopContext } from '../../Context/ShopContext'
 import remove_icon from "../Images/cart_cross_icon.png"  
+import { Link } from 'react-router-dom'
 
 
 const CartItems = () => {
@@ -61,7 +62,9 @@ const CartItems = () => {
           </div>
 
           </div>
-          {/* <button>PROCEED TO CHECKOUT</button> */}
+
+          
+          <Link to="/checkout"> <button>PROCEED TO CHECKOUT</button> </Link>
 
         </div>
       </div>

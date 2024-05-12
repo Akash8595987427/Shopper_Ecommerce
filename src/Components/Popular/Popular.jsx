@@ -20,7 +20,7 @@ const Popular = (props) => {
 
       <div className="popular-dash">
         <hr style={{backgroundColor: (props.mode === "black")?"yellow":"black"}}/>
-        {console.log(props.mode)}
+        {/* {console.log(props.mode)} */}
       </div>
 
         <div className="popular-items">

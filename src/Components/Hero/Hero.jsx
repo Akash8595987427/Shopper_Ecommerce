@@ -1,5 +1,5 @@
 import React from 'react'
-// import "./Hero.css"
+import "./Hero.css"
 import carousel_img_1 from "../Images/carousel_img-1.webp"
 import carousel_img_2 from "../Images/carousel_img-2.webp"
 import carousel_img_3 from "../Images/carousel_img-3.webp"
@@ -22,7 +22,7 @@ const Hero = () => {
             <img className="d-block w-100" src={carousel_img_1} alt="First slide" />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src= {carousel_img_2} alt="Second slide" />
+            <img className="d-block w-100 h-100" src= {carousel_img_2} alt="Second slide" />
           </div>
           <div className="carousel-item">
             <img className="d-block w-100" src={carousel_img_3} alt="Third slide" />

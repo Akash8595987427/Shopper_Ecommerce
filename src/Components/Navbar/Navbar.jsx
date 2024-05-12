@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'                  //changes done yesterda
 import { ShopContext } from '../../Context/ShopContext'
 import DarkModeIcon from '@mui/icons-material/DarkMode'; 
 import { IoCartSharp } from "react-icons/io5";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 
 
@@ -14,6 +15,7 @@ const Navbar = (props) => {
 
   const {getTotalCartItems} = useContext(ShopContext)
   const [mode, setMode] = useState("black");
+  const [val, setVal] = useState("Shop");
 
   const toggleMode=(mode)=>{
     if(mode === "black"){
@@ -39,11 +41,12 @@ const Navbar = (props) => {
           </div>
       </Link>
 
-        <div className="nav-menu ">
-          <li> <Link  style={{ color : (mode==="white")?"yellow":"black", textDecoration: "none"}}   to="/" > Shop  </Link> </li>
-          <li> <Link  style={{ color : (mode==="white")?"yellow":"black", textDecoration: "none"}}   to="/mens" > Men  </Link> </li>
-          <li> <Link  style={{ color : (mode==="white")?"yellow":"black", textDecoration: "none"}}  to="/womens" >  Women  </Link>  </li>
-          <li> <Link  style={{ color : (mode==="white")?"yellow":"black", textDecoration: "none"}}  to="/kids" > Kids </Link>  </li> 
+        <div className="nav-menu " onClick={(event)=>{setVal(event.target.textContent)}}>
+          {console.log(typeof val)}
+          <li> <Link  style={{ color : (mode==="white")?"yellow":"black", textDecoration: "none", borderBottom: (val==="Shop")?"2px solid red":""}}   to="/" > Shop  </Link> </li>
+          <li> <Link  style={{ color : (mode==="white")?"yellow":"black", textDecoration: "none", borderBottom: (val==="Men") ?"2px solid red":""}}   to="/mens" > Men  </Link> </li>
+          <li> <Link  style={{ color : (mode==="white")?"yellow":"black", textDecoration: "none", borderBottom: val==="Women"?"2px solid red":""}}  to="/womens" >  Women  </Link>  </li>
+          <li> <Link  style={{ color : (mode==="white")?"yellow":"black", textDecoration: "none", borderBottom : val==="Kids"?"2px solid red":""}}  to="/kids" > Kids </Link>  </li> 
         </div>
 
         <div className="nav-login-cart ">
@@ -61,11 +64,12 @@ const Navbar = (props) => {
               toggleMode(mode)
             }
           }} style={{color : (mode==="white")?"yellow":"black"}}></DarkModeIcon>
-
-         
-
           
         </div>
+
+        <div className="hamburgerMenu">
+            <GiHamburgerMenu />
+          </div>
     </div>
     
     </>

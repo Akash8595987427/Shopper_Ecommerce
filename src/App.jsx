@@ -12,6 +12,8 @@ import Footer from "./Components/Footer/Footer";
 import men_banner from "./Components/Images/banner_mens.png";
 import women_banner from "./Components/Images/banner_women.png";
 import kid_banner from "./Components/Images/banner_kids.png";
+import Admin from "./Components/Admin/Admin";
+import Checkout from "./Pages/Checkout";
 
 
 
@@ -41,6 +43,8 @@ const App = () => {
       <Route path="/cart" element={<Cart mode={modes}/>}  />
       <Route path="/signup" element={<Signup mode={modes}/>}  />                         
       <Route path="/login" element={<Login mode={modes}/>}  />                            
+      <Route path="/admin" element={<Admin mode={modes}/>}  />                            
+      <Route path="/checkout" element={<Checkout mode={modes}/>}  />                            
 
     </Routes>
     <Footer mode={modes} />
