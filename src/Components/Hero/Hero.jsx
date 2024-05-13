@@ -11,30 +11,30 @@ const Hero = () => {
   return (
     <>
 
-      <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+      <div id="carouselExampleIndicators" className="carousel slide h-100" data-ride="carousel">
         <ol className="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img className="d-block w-100" src={carousel_img_1} alt="First slide" />
+        <div className="carousel-inner h-100">
+          <div className="carousel-item active h-100">
+            <img className="d-block w-100 h-100" src={carousel_img_1} alt="First slide" />
           </div>
-          <div className="carousel-item">
+          <div className="carousel-item h-100">
             <img className="d-block w-100 h-100" src= {carousel_img_2} alt="Second slide" />
           </div>
-          <div className="carousel-item">
-            <img className="d-block w-100" src={carousel_img_3} alt="Third slide" />
+          <div className="carousel-item h-100">
+            <img className="d-block w-100 h-100" src={carousel_img_3} alt="Third slide" />
           </div>
-          <div className="carousel-item">
-            <img className="d-block w-100" src={carousel_img_4} alt="Third slide" />
+          <div className="carousel-item h-100">
+            <img className="d-block w-100 h-100" src={carousel_img_4} alt="Third slide" />
           </div>
-          <div className="carousel-item">
-            <img className="d-block w-100" src={carousel_img_5} alt="Third slide" />
+          <div className="carousel-item h-100">
+            <img className="d-block w-100 h-100" src={carousel_img_5} alt="Third slide" />
           </div>
-          <div className="carousel-item">
-            <img className="d-block w-100 " src={carousel_img_6} alt="Third slide" />
+          <div className="carousel-item h-100">
+            <img className="d-block w-100 h-100 " src={carousel_img_6} alt="Third slide" />
           </div>
         </div>
         <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

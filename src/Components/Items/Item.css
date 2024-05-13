@@ -1,5 +1,9 @@
 .item{
     width: 350px;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto;
+    place-items: center;
 }
 
 

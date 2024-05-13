@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react'
 import "./ProductDisplay.css"
-import star_icon from "../Images/star_icon.png"
-import star_dull_icon from "../Images/star_dull_icon.png"
+
 import { ShopContext } from '../../Context/ShopContext'
 import { Link } from 'react-router-dom'
 
@@ -16,6 +15,7 @@ const ProductDisplay = (props) => {
     <>
     
         <div className="productdisplay">
+        {console.log(props.mode)}
             <div className="productdisplay-left">
                 {/* <div className="productdisplay-img-list">
                     <img src={product.image} alt="" />
@@ -28,16 +28,8 @@ const ProductDisplay = (props) => {
                 </div>
             </div>
 
-            <div className="productdisplay-right">
-                <h1>{product.name}</h1>
-                {/* <div className="productdisplay-right-star">
-                    <img src={star_icon} alt="" />
-                    <img src={star_icon} alt="" />
-                    <img src={star_icon} alt="" />
-                    <img src={star_icon} alt="" />
-                    <img src={star_dull_icon} alt="" />
-                    <p>122</p>
-                </div> */}
+            <div className="productdisplay-right" style={{color: (props.mode === "black")?"white":"black"}}>
+                <h1 style={{color: (props.mode === "black")?"yellow":"black"}}>{product.name}</h1>
                 <div className="productdisplay-right-prices">
                     <div className="productdisplay-right-price-old"> ${product.old_price} </div>
                     <div className="productdisplay-right-price-new"> ${product.new_price} </div>
@@ -47,12 +39,13 @@ const ProductDisplay = (props) => {
                     A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment .
                 </div>
                 <div className="productdisplay-rigth-size">
-                    <h1> Select Size </h1>
-                    <div className="productdisplay-right-sizes" onClick={(event)=>{ 
+                    <h1 style={{color: (props.mode === "black")?"yellow":"black"}}> Select Size </h1>
+                    <div className="productdisplay-right-sizes" style={{color: (props.mode==="black")?"grey":"black"}} onClick={(event)=>{ 
                         const div = document.querySelector('div');
                         if(event.target.classList.contains("size")){ 
                             event.target.classList.add('selected');
                             setSize(event.target.innerHTML);
+                            props.getSize(size);
                             // deselect all other buttons
                             const divElem = div.querySelectorAll('.size');
                             divElem.forEach((divElem) => {
@@ -68,7 +61,7 @@ const ProductDisplay = (props) => {
                     </div>
                 </div>
                     <button className='cart_btn' onClick={()=>{addToCart(product.id);  window.scrollTo(0, 0)}}>ADD TO CART</button> 
-                <Link to="/cart"><button className='cart_btn' onClick={(size)=>{ window.scrollTo(0, 0)}}>GO TO CART</button> </Link>
+                <Link to="/cart"><button className='cart_btn' onClick={()=>{ window.scrollTo(0, 0)}}>GO TO CART</button> </Link>
                 <p className='productdisplay-right-category'><span> Category : </span> Woman, T-Shirt, Crop Top</p>
                 <p className='productdisplay-right-category'><span> Tags : </span> Modern, T-Latest</p>
             </div>

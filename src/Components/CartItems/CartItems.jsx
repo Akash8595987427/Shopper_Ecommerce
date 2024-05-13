@@ -12,7 +12,7 @@ const CartItems = (props) => {
   return (
     <>
     <div className="cartitems">
-        <div className="cartitems-format-main">
+        <div className="cartitems-format-main" style={{color : (props.mode)==="black"?"yellow":"black"}}>
             <p>Products</p>
             <p>Title</p>
             <p>Price</p>
@@ -21,12 +21,12 @@ const CartItems = (props) => {
             <p>Remove</p>
         </div>
         <hr />
-       { console.log(props.size)}
+       { console.log(props.mode)}
        {all_product.map((e)=>{
         if(cartItems[e.id]>0)
         {
             return <div>
-            <div className="cartitems-format cartitems-format-main">
+            <div className="cartitems-format cartitems-format-main" style={{color : (props.mode)==="black"?"yellow":"black"}}>
                 <img src={e.image} alt="" className='carticon-product-icon' />
                 <p>{e.name}</p>
                 <p>${e.new_price}</p>
@@ -42,7 +42,7 @@ const CartItems = (props) => {
        
       {/* changes done yesterday  */}
       <div className="cartitems-down">
-        <div className="cartitems-total">
+        <div className="cartitems-total " style={{color : (props.mode)==="black"?"yellow":"black"}}>
 
         <h1> Cart Totals </h1>
         <div className='cart_total_calculate'>
@@ -50,12 +50,12 @@ const CartItems = (props) => {
             <p>Subtotal</p>
             <p>$ {getTotalCartAmount()}</p>
           </div>
-          <hr />
+          <hr style={{color : (props.mode)==="black"?"yellow":"black"}}/>
           <div className="cartitems-total-item">
             <p> Shipping Free </p>
             <p> Free </p>
           </div>
-          <hr />
+          <hr style={{color : (props.mode)==="black"?"yellow":"black"}}/>
           <div className="cartitems-total-item">
             <h3>Total</h3>
             <h3>$ {getTotalCartAmount()}</h3>
@@ -64,7 +64,7 @@ const CartItems = (props) => {
           </div>
 
           
-          <Link to="/checkout"> <button id='proceedBtn'> CHECKOUT</button> </Link>
+          <Link to="/checkout"> <button id='proceedBtn' > CHECKOUT</button> </Link>
 
         </div>
       </div>

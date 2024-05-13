@@ -1,5 +1,6 @@
 
 .navbar{
+    max-width: 2160px;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -45,7 +46,7 @@
     cursor: pointer;
 }
 
-.nav-menu li:hover{
+.borderBottom{
     border-bottom: 2px solid red;
 }
 

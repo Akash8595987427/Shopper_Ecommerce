@@ -1,36 +1,35 @@
 .productdisplay{
-
+    width: 90%;
+    /* height: 140vh; */
+    height: auto;
     display: flex;
-    margin: 0px 170px;
-    height: 140vh;
-    /* background-color: yellow; */
-
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: auto; /* background-color: yellow; */
+    padding: 0 4rem;
 }
 
-
 .productdisplay-left{
+    width: 50%;
+    height: 50%;
+    /* background-color: rebeccapurple; */
     display: flex;
     /* flex-direction: column; */
     gap: 17px;
 }
 
 
-.productdisplay-img-list{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+
+.productdisplay-img{
+    width: 100%;
+    /* background-color: green; */
 }
-
-
-.productdisplay-img-list img{
-    height: 10%;
-}
-
 
 .productdisplay-main-img{
-    /* height: 23%; */
-    width: 100%;
+    width: 350px;
     height: auto;
+    /* height: auto; */
 }
 
 
@@ -38,12 +37,17 @@
     margin: 0px 70px;
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
 }
 
 
 .productdisplay-right h1{
     color: #3d3d3d;
     font-size: 40px;
+}
+
+.productdisplay-right-description{
+    margin-bottom: 2rem;
 }
 
 
@@ -147,4 +151,63 @@
 
 .cart_btn:active{
     background-color: lightcoral;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    
+    .productdisplay{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .productdisplay-right{
+        & h1{
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+
+    .productdisplay-right{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .productdisplay-right-description{
+        text-align: center;
+    }
+
+}
+
+
+@media screen and (max-width: 1000px) {
+    
+    .productdisplay{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .productdisplay-right{
+        & h1{
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+
+    .productdisplay-right{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .productdisplay-right-description{
+        text-align: center;
+    }
+
 }

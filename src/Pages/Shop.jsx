@@ -9,16 +9,14 @@ import Newsletter from "../Components/Newsletter/Newsletter";
 
 
 const Shop = (props) => {
-  const modes = props.mode
-  // console.log(props.mode);
   return (
     <>
     
       <Hero />
-      <Item mode={modes} />
-      <Popular mode = {modes}  />
+      <Item />
+      <Popular mode = {props.mode}  />
       <Offers />
-      <NewCollections mode = {modes} />
+      <NewCollections mode = {props.mode} />
       <Newsletter />
     </>
   );
