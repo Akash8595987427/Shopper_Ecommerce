@@ -3,7 +3,7 @@ import "./Login.css"                                 // This page created yester
 
 const Login = (props) => {
   const changeBackground={
-    backgroundColor : (props.mode === "black")?"black":"white",
+    backgroundColor : (props.mode === "black")?"#f3e5e57b":"white",
   }
 
   const changeColor={

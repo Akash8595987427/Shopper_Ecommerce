@@ -19,7 +19,7 @@ const Navbar = (props) => {
 
   const toggleMode=(mode)=>{
     if(mode === "black"){
-      document.body.style.backgroundColor = "black";
+      document.body.style.backgroundColor = "#121212";
       return props.getMode("black");
       
     }
@@ -68,8 +68,8 @@ const Navbar = (props) => {
         </div>
 
         <div className="hamburgerMenu">
-            <GiHamburgerMenu />
-          </div>
+            <GiHamburgerMenu /> 
+        </div>
     </div>
     
     </>

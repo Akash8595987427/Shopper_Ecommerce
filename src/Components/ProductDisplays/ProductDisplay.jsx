@@ -15,17 +15,11 @@ const ProductDisplay = (props) => {
     <>
     
         <div className="productdisplay">
-        {console.log(props.mode)}
+            <div className="product_display_inner">
+
+            
             <div className="productdisplay-left">
-                {/* <div className="productdisplay-img-list">
-                    <img src={product.image} alt="" />
-                    <img src={product.image} alt="" />
-                    <img src={product.image} alt="" />
-                    <img src={product.image} alt="" />
-                </div> */}
-                <div className="productdisplay-img">
-                    <img className="productdisplay-main-img" src={product.image} alt="" />
-                </div>
+                    <img  src={product.image} alt="" />
             </div>
 
             <div className="productdisplay-right" style={{color: (props.mode === "black")?"white":"black"}}>
@@ -66,7 +60,7 @@ const ProductDisplay = (props) => {
                 <p className='productdisplay-right-category'><span> Tags : </span> Modern, T-Latest</p>
             </div>
 
-
+            </div>
         </div>
       
     </>

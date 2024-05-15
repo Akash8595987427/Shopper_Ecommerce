@@ -14,10 +14,10 @@
 
 .cartitems-format-main{
     display: grid;
-    grid-template-columns: 0.3fr 4fr 1fr 1fr 1fr 1fr;
-    place-items: center;
-    /* align-items: center; */
-    gap: 75px;
+    grid-template-columns: 0.3fr 3fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
     padding: 20px 0px;
     color: #454545;
     font-size: 18px;
@@ -43,12 +43,17 @@
     cursor: pointer;
 }
 
+.removeBtn{
+    margin-left: 4vw;
+}
+
 .cartitems-quantity{
-    margin-left: 6vw;
+    margin-left: 3.3vw;
     width: 64px;
     height: 50px;
     border: 2px solid #ebebeb;
     background-color: #fff;
+    text-align: center;
 }
 
 

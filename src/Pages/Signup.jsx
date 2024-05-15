@@ -4,7 +4,7 @@ import "./Signup.css"
 
 const Signup = (props) => {
   const changeBackground = {
-    backgroundColor : (props.mode==="black")?"black":"white",
+    backgroundColor : (props.mode==="black")?"#f3e5e57b":"white",
   }
 
   const changeColor={
@@ -13,7 +13,7 @@ const Signup = (props) => {
   return (
     <div>
       
-      <div className="signupPage" style={{backgroundColor : (props.mode==="black")?"#5e0567":"#fce3fe"}}>
+      <div className="signupPage" style={{backgroundColor : (props.mode==="black")?"#1f2937":"#fce3fe"}}>
         <div className="signupPage-container" style={changeBackground}>
           <h1 style={changeColor}>Sign Up</h1>
           <div className="signupPage-fields">

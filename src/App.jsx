@@ -14,6 +14,7 @@ import women_banner from "./Components/Images/banner_women.png";
 import kid_banner from "./Components/Images/banner_kids.png";
 import Admin from "./Components/Admin/Admin";
 import Checkout from "./Pages/Checkout";
+// import ResponsiveNav from "./Components/Responsive_Nav/ResponsiveNav";
 
 
 
@@ -45,6 +46,7 @@ const App = () => {
       <Route path="/login" element={<Login mode={modes}/>}  />                            
       <Route path="/admin" element={<Admin mode={modes}/>}  />                            
       <Route path="/checkout" element={<Checkout mode={modes}/>}  />                            
+      {/* <Route path="/responsive_nav" element={<ResponsiveNav mode={modes}/>}  />                             */}
 
     </Routes>
     <Footer mode={modes} />
