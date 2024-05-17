@@ -66,23 +66,35 @@ const ShopContextProvider = (props) => {
         return totalAmount;
     }
 
-    let obj = {
+    let personalDetail = {
         email : "abc123@gmail.com",
         address : "142 Street",
         productInfo : {},
     }
 
-    console.log(obj);
+    // console.log(obj);
 
     const getProductInfo=(val)=>{
-        setArr([...arr, val])
+        // setArr([...arr, val])
     //     obj.productInfo = [...arr];
     // // //    setArr(arr=> [...arr, val]);
-        console.log(arr);
+        console.log(val);
+        // console.log(obj);
+    }
+
+    const getProductId=(val)=>{
+        
+        let i = 1;
+        let obj = all_product[val];
+        console.log(obj);
+        personalDetail.productInfo.val = obj;
+        console.log(personalDetail)
+
+        
     }
     
     
-    const contextValue = {getTotalCartItems, all_product, cartItems, addToCart, removeFromCart, getTotalCartAmount, getSizeFunction, getProductInfo};
+    const contextValue = {getTotalCartItems, all_product, cartItems, addToCart, removeFromCart, getTotalCartAmount, getSizeFunction, getProductInfo, getProductId};
 
     return(
         <ShopContext.Provider value = {contextValue}>

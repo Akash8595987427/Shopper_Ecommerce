@@ -11,13 +11,13 @@ import Newsletter from "../Components/Newsletter/Newsletter";
 const Shop = (props) => {
   return (
     <>
-    
-      <Hero />
+      {console.log("Hello I am the Shop.jsx mode = ", props.mode)}
+      <Hero mode={props.mode} />
       <Item mode={props.mode} />
       <Popular mode = {props.mode}  />
-      <Offers />
+      <Offers mode={props.mode} />
       <NewCollections mode = {props.mode} />
-      <Newsletter />
+      <Newsletter mode={props.mode}/>
     </>
   );
 };

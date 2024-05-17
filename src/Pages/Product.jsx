@@ -13,8 +13,9 @@ const Product = (props) => {
 
   return (
     <div>
-       <Breadcrum product = {product} mode = {props.mode} />
-       <ProductDisplay product={product} mode = {props.mode} />                
+       <Breadcrum product = {product} mode = {props.mode}/>
+       <ProductDisplay product={product} mode = {props.mode} id={productId}/>      
+       {console.log(productId)}          
     </div>
   );
 };

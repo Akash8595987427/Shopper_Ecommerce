@@ -9,8 +9,9 @@ import { Link } from 'react-router-dom'
 const ProductDisplay = (props) => {
     const [size, setSize]  =  useState();
     const {product} = props;
-    const {addToCart} = useContext(ShopContext);
+    const {addToCart, getProductId} = useContext(ShopContext);
     const {getSizeFunction} = useContext(ShopContext);
+
 
   return (
     <>
@@ -18,7 +19,7 @@ const ProductDisplay = (props) => {
         <div className="productdisplay">
             <div className="product_display_inner">
 
-            
+            {console.log(props.id)}
             <div className="productdisplay-left">
                     <img  src={product.image} alt="" />
             </div>
@@ -57,7 +58,7 @@ const ProductDisplay = (props) => {
                     </div>
                 </div>
                 {console.log(size)}
-                    <button className='cart_btn' onClick={()=>{(size===undefined)?alert("Please select size"):addToCart(product.id);  window.scrollTo(0, 0)}}>ADD TO CART</button> 
+                    <button className='cart_btn' onClick={()=>{(size===undefined)?alert("Please select size"):addToCart(product.id);  window.scrollTo(0, 0); getProductId(props.id);}}>ADD TO CART</button> 
                 <Link to="/cart"><button className='cart_btn'>GO TO CART</button> </Link>
                 <p className='productdisplay-right-category'><span> Category : </span> Woman, T-Shirt, Crop Top</p>
                 <p className='productdisplay-right-category'><span> Tags : </span> Modern, T-Latest</p>
