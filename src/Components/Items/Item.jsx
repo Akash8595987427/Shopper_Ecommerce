@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Item.css";
 import { Link } from 'react-router-dom'
 
 const Item = (props) => { 
+
+
   return (
       <div className="item">
       
@@ -11,11 +13,10 @@ const Item = (props) => {
         { (props.id)?<Link to={`/product/${props.id}`}> <img src={props.image} alt="" onClick={()=>{ window.scrollTo(0, 0)}} /> </Link>:""}
         
          {/* {console.log(props.id)} */}
-         {/* {console.log(props.mode)} */}
+         {/* {console.log(mode)} */}
         </div>
-
         <div className="item-heading">
-        <Link to={`/product/${props.id}`}>  <p>{props.name}</p>  </Link>
+        <Link to={`/product/${props.id}`}>  <p id="title">{props.name}</p>  </Link>
         </div>
         
 

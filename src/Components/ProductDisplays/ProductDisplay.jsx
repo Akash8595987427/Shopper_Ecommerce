@@ -7,9 +7,10 @@ import { Link } from 'react-router-dom'
 
 
 const ProductDisplay = (props) => {
-    const [size, setSize]  =  useState(false);
+    const [size, setSize]  =  useState();
     const {product} = props;
     const {addToCart} = useContext(ShopContext);
+    const {getSizeFunction} = useContext(ShopContext);
 
   return (
     <>
@@ -39,8 +40,9 @@ const ProductDisplay = (props) => {
                         if(event.target.classList.contains("size")){ 
                             event.target.classList.add('selected');
                             setSize(event.target.innerHTML);
-                            props.getSize(size);
+                            getSizeFunction(event.target.innerHTML);
                             // deselect all other buttons
+                            console.log(event.target)
                             const divElem = div.querySelectorAll('.size');
                             divElem.forEach((divElem) => {
                             if (divElem !== event.target) {
@@ -54,13 +56,14 @@ const ProductDisplay = (props) => {
                         <div className='size'>XXL</div>
                     </div>
                 </div>
-                    <button className='cart_btn' onClick={()=>{addToCart(product.id);  window.scrollTo(0, 0)}}>ADD TO CART</button> 
-                <Link to="/cart"><button className='cart_btn' onClick={()=>{ window.scrollTo(0, 0)}}>GO TO CART</button> </Link>
+                {console.log(size)}
+                    <button className='cart_btn' onClick={()=>{(size===undefined)?alert("Please select size"):addToCart(product.id);  window.scrollTo(0, 0)}}>ADD TO CART</button> 
+                <Link to="/cart"><button className='cart_btn'>GO TO CART</button> </Link>
                 <p className='productdisplay-right-category'><span> Category : </span> Woman, T-Shirt, Crop Top</p>
                 <p className='productdisplay-right-category'><span> Tags : </span> Modern, T-Latest</p>
             </div>
-
             </div>
+            {/* {console.log(size)} */}
         </div>
       
     </>

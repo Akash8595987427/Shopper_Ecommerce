@@ -19,7 +19,7 @@ const Navbar = (props) => {
 
   const toggleMode=(mode)=>{
     if(mode === "black"){
-      document.body.style.backgroundColor = "#121212";
+      document.body.style.backgroundColor = "#242424";
       return props.getMode("black");
       
     }
@@ -42,7 +42,7 @@ const Navbar = (props) => {
       </Link>
 
         <div className="nav-menu " onClick={(event)=>{setVal(event.target.textContent)}}>
-          {console.log(typeof val)}
+          {/* {console.log(typeof val)} */}
           <li> <Link  style={{ color : (mode==="white")?"yellow":"black", textDecoration: "none", borderBottom: (val==="Shop")?"2px solid red":""}}   to="/" > Shop  </Link> </li>
           <li> <Link  style={{ color : (mode==="white")?"yellow":"black", textDecoration: "none", borderBottom: (val==="Men") ?"2px solid red":""}}   to="/mens" > Men  </Link> </li>
           <li> <Link  style={{ color : (mode==="white")?"yellow":"black", textDecoration: "none", borderBottom: val==="Women"?"2px solid red":""}}  to="/womens" >  Women  </Link>  </li>

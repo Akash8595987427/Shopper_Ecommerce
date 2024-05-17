@@ -13,7 +13,7 @@ const Shop = (props) => {
     <>
     
       <Hero />
-      <Item />
+      <Item mode={props.mode} />
       <Popular mode = {props.mode}  />
       <Offers />
       <NewCollections mode = {props.mode} />
